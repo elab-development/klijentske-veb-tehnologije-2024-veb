@@ -9,8 +9,6 @@
 7. react-router-dom
 8. Odvojeni folder za modele i komponente
 
-> Pošto ne piše u zahtevima, čekam odgovor da li za ovaj domaći treba da se radi prema dizajnu iz figme...
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
