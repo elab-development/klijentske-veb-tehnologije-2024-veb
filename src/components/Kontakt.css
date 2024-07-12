@@ -1,0 +1,84 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/kontakt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    color: #5B3004;
+  }
+  
+  .form-container {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 60%;
+    background-image: url('../assets/profil.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  form{
+    width: 70%;
+    margin-left: 50px;
+  }
+  .form-container h1 {
+    margin-bottom: 100px;
+    color: #5B3004;
+    font-size: 70px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #5B3004;
+  }
+  
+  .form-group textarea {
+    resize: vertical; 
+    height: 400px;
+  }
+  
+  .info {
+    margin-top: 100px;
+    display: block;
+    justify-content: space-between;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+  }
+  
+  .info-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .info-item p {
+    color: #5B3004;
+  }
+  

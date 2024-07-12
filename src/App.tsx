@@ -1,5 +1,6 @@
 import './App.css'; 
-import Prijava from './components/Prijava';
+import Kontakt from './components/Kontakt';
+// import Prijava from './components/Prijava';
 // import Navig from './components/Navig';
 // import Onama from './components/Onama';
 // import CardData from './components/CardData';
@@ -10,8 +11,9 @@ import Prijava from './components/Prijava';
 function App() {
   return (
     <div className="App">
-      <Prijava/>
+      <Kontakt/>
 
+      {/* <Prijava/> */}
 
       {/* <ProfilKorisnika/> */}
       {/* <Navig /> */}
