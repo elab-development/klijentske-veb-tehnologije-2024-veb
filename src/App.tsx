@@ -1,33 +1,27 @@
-import './App.css'; 
-// import Kontakt from './components/Kontakt';
-import Prijava from './components/Prijava';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Kontakt from './components/Kontakt';
+import Onama from './components/Onama';
 import Navig from './components/Navig';
-// import Onama from './components/Onama';
-// import CardData from './components/CardData';
-// import LeftSideBar from './components/LeftSideBar';
-// import ProfilKorisnika from './components/ProfilKorisnika';
-// import Registracija from './components/Registracija';
+import Registracija from './components/Registracija';
+import Prijava from './components/Prijava';
+import ProfilKorisnika from './components/ProfilKorisnika';
+import OnamaSaNavigacijom from './components/OnamaSaNavigacijom';
 
 function App() {
+//  da se doda klasa za Usera i da se iskombinuje tu nesto sa ovim kad je ulogovan i kad nije
   return (
-    <div className="App">
-      {/* <Kontakt/> */}
-      {/* Pa kako sve bas na absolute sunce mu krvavo jebem? */}
-      <Navig/> 
-      <Prijava/>
-
-      {/* <ProfilKorisnika/> */}
-      {/* <Navig /> */}
-
-      {/* <Registracija/> */}
-      {/* <LeftSideBar></LeftSideBar>
-      <CardData
-        imageSrc="assets/slika.png"
-        title="John Doe"
-        description="Lorem ipsum dolor sit amet"
-      /> */}
-      {/* <Onama /> */}
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Navig />} />
+          <Route path="/kontakt" element={<Kontakt />}/>
+          <Route path="/registracija" element={<Registracija />}/>
+          <Route path="/prijava" element={<Prijava  />}/>
+          <Route path= "/onama" element ={<OnamaSaNavigacijom/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
