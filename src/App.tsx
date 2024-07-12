@@ -3,14 +3,16 @@
 // import CardData from './components/CardData';
 // import LeftSideBar from './components/LeftSideBar';
 import './App.css'; 
-import Registracija from './components/Registracija';
+import ProfilKorisnika from './components/ProfilKorisnika';
+// import Registracija from './components/Registracija';
 
 function App() {
   return (
     <div className="App">
+      <ProfilKorisnika/>
       {/* <Navig /> */}
 
-      <Registracija/>
+      {/* <Registracija/> */}
       {/* <LeftSideBar></LeftSideBar>
       <CardData
         imageSrc="assets/slika.png"
