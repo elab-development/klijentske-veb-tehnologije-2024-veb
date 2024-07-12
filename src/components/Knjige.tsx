@@ -1,6 +1,9 @@
 import './Knjige.css'; 
-import CardData from './CardData';
 import books from './Books';
+import { useState } from 'react';
+import Book from '../models/Book';
+import LeftSideBar from './LeftSideBar';
+import FilteredBooks from '../models/FilteredBooks';
 
 // const books: Book[] = [
 //   { imageSrc: dina, title: 'Dina', author: 'Frank Herbert', year: 1965 },
@@ -14,15 +17,37 @@ import books from './Books';
 // ];
 
 const Knjige: React.FC = () => {
+  // const [searchTerm, setSearchTerm] = useState<string>('');
+
+  // const filteredBooks = books.filter(book =>
+  //   book.title.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+  const [filteredBooks, setFilteredBooks] = useState<Book[]>(books);
+
+  const handleSearch = (searchTerm: string) => {
+    const filtered = books.filter(book =>
+      book.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredBooks(filtered);
+  };
   return (
-    <div className="main-content">
-      <div className="card-grid">
-        {books.map((book, index) => (
-          <CardData key={index} {...book} />
-        ))}
-      </div>
+    <div>
+      <LeftSideBar onSearch={handleSearch} />
+      <div className="main-content">
+    <FilteredBooks filteredBooks={filteredBooks} />
+  </div>
     </div>
+
+    // <div className="main-content">
+    //   <div className="card-grid">
+    //     {filteredBooks.map((book, index) => (
+    //       <CardData key={index} {...book} />
+    //     ))}
+    //   </div>
+
+    // </div>
   );
 };
 
 export default Knjige;
+

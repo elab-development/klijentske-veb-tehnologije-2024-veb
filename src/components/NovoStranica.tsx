@@ -7,7 +7,9 @@ const NovoStranica = () => {
 
     return (
         <div>
-            <LeftSideBar/>
+            <LeftSideBar onSearch={function (searchTerm: string): void {
+                throw new Error("Function not implemented.");
+            } }/>
             <Navig/>
             <div className="main-content">
                 <div className="card-grid">
