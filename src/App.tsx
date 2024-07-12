@@ -11,6 +11,8 @@ import LeftSideBar from './components/LeftSideBar';
 import CardData from './components/CardData';
 import Knjige from './components/Knjige';
 import KnjigeStranica from './components/KnjigeStranica';
+import NovoStranica from './components/NovoStranica';
+import NajpopularnijeStranica from './components/NajpopularnijeStranica';
 
 function App() {
 //  da se doda klasa za Usera i da se iskombinuje tu nesto sa ovim kad je ulogovan i kad nije
@@ -24,6 +26,8 @@ function App() {
           <Route path="/prijava" element={<Prijava  />}/>
           <Route path= "/onama" element ={<OnamaSaNavigacijom/>}/>
           <Route path= "/knjige" element ={<KnjigeStranica/>}/>
+          <Route path="/novo" element={<NovoStranica />} />
+          <Route path="/najpopularnije" element={<NajpopularnijeStranica />} />
         </Routes>
       </div>
     </Router>
