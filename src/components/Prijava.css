@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+}
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/prijava.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    color: #5B3004;
+  }
+  form{
+    margin-top: 125px;
+  }
+  .form-container {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+    width: 50%;
+  }
+  
+  .form-container h1 {
+    margin-bottom: 20px;
+    color: #5B3004;
+    font-size: 70px;
+  }
+  
+  .form-group {
+    margin-bottom: 35px;
+    text-align: left;
+    display: block;
+    align-items: center;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #5B3004;
+    flex: 1;
+    margin-top: 30px;
+  }
+  
+  .form-group input {
+    width: calc(100% - 40px);
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    font-size: 16px;
+    color: #5B3004;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .form-group img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .form-actions a {
+    text-decoration: none;
+    color: #945618D1; 
+  }
+  
+  .prijavise {
+    padding: 20px 40px;
+    background-color: #945618D1;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 45px;
+    color: #5B3004;
+  }
+
+  

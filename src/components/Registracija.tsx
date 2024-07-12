@@ -1,10 +1,8 @@
-// src/components/Registracija.tsx
-
 import React from 'react';
 import './Registracija.css';
-import nameIcon from '../assets/email.svg'; // Replace with your actual SVG file path
-import emailIcon from '../assets/user.svg'; // Replace with your actual SVG file path
-import passwordIcon from '../assets/password.svg'; // Replace with your actual SVG file path
+import emailIcon from '../assets/email.svg';
+import nameIcon from '../assets/user.svg'; 
+import passwordIcon from '../assets/password.svg'; 
 
 const Registracija: React.FC = () => {
   return (
@@ -16,12 +14,12 @@ const Registracija: React.FC = () => {
           <div className="form-group">
             <label htmlFor="name">email</label>
             <input type="text" id="name" name="name" />
-            <img src={nameIcon} alt="email" />
+            <img src={emailIcon} alt="email" />
           </div>
           <div className="form-group">
             <label htmlFor="email">korisnicko ime</label>
             <input type="email" id="email" name="email" />
-            <img src={emailIcon} alt="user" />
+            <img src={nameIcon} alt="user" />
           </div>
           <div className="form-group">
             <label htmlFor="password">lozinka</label>
