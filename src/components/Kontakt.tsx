@@ -1,5 +1,5 @@
 import React from 'react';
-import './Kontakt.css'; // Import CSS for styling
+import './Kontakt.css';
 import gmailIcon from '../assets/gmail.svg'; 
 import contactIcon from '../assets/contacts.svg'; 
 

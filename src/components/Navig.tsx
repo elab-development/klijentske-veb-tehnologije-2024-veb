@@ -5,9 +5,9 @@ function Navig() {
                 <h1>BIBLIOTEKA</h1>
             </div>
             <div className="right">
-                <a href="#">Kontakt</a>
-                <a href="#">Knjige</a>
-                <a href="#">Prijavi se</a>
+                <a href="/kontakt">Kontakt</a>
+                <a href="/knjige">Knjige</a>
+                <a href="/prijava">Prijavi se</a>
                 <button>Registruj se</button>
             </div>
         </div>

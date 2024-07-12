@@ -1,0 +1,15 @@
+.main-content {
+    padding: 20px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+  }
+  
