@@ -1,7 +1,7 @@
 import './App.css'; 
-import Kontakt from './components/Kontakt';
-// import Prijava from './components/Prijava';
-// import Navig from './components/Navig';
+// import Kontakt from './components/Kontakt';
+import Prijava from './components/Prijava';
+import Navig from './components/Navig';
 // import Onama from './components/Onama';
 // import CardData from './components/CardData';
 // import LeftSideBar from './components/LeftSideBar';
@@ -11,9 +11,10 @@ import Kontakt from './components/Kontakt';
 function App() {
   return (
     <div className="App">
-      <Kontakt/>
-
-      {/* <Prijava/> */}
+      {/* <Kontakt/> */}
+      {/* Pa kako sve bas na absolute sunce mu krvavo jebem? */}
+      <Navig/> 
+      <Prijava/>
 
       {/* <ProfilKorisnika/> */}
       {/* <Navig /> */}
