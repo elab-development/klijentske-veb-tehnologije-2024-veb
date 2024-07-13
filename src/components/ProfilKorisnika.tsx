@@ -1,41 +1,44 @@
+import { useAuth } from '../models/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import './ProfilKorisnika.css';
 // import saveIcon from '../assets/save-icon.svg';
 // import cancelIcon from '../assets/cancel-icon.svg'; 
 
 const ProfilKorisnika: React.FC = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const logoutF = () => {
+    logout
+    navigate('/');
+  };
+  const MojeRezervacije = () => {
+    navigate('/mojeRezervacije');
+  };
   return (
-    <div className="background">
-      <div className="form-container">
+    <div className="backgroundProfil">
+      <div className="form-containerProfil">
         <h1>PROFIL KORISNIKA</h1>
         <form>
-          <div className="form-group">
+          <div className="form-groupProfil">
             <label htmlFor="name">Ime i prezime:</label>
-            <input type="text" id="name" name="name" />
+            <p>{user}</p>
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
-          </div>
-          <div className="form-group">
+          <div className="form-groupProfil">
             <label htmlFor="password">Lozinka:</label>
             <input type="password" id="password" name="password"placeholder="***********" />
           </div>
-          <div className="form-buttons">
-            <div className="left-buttons">
-              <button type="button" className="leftButtons">
+          <div className="form-buttonsProfil">
+            <div className="left-buttonProfil">
+              <button className="leftButtonsProfil" onClick={MojeRezervacije}>
                 Moje rezervacije
               </button>
-              <button type="submit" className="leftButtons">
-                Istorija pozajmica
-              </button>
+              <button className="leftButtonsProfil" onClick={logoutF}>Logout</button>
             </div>
           </div>
-          <div className="right-button">
-              <button type="button" className="izlogujse">Izloguj se</button>
-            </div>  
         </form>
       </div>
     </div>
+
   );
 };
 

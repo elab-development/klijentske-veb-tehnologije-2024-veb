@@ -1,4 +1,4 @@
-.background {
+.backgroundProfil {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -15,7 +15,7 @@
     color: #5B3004;
   }
   
-  .form-container {
+  .form-containerProfil {
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -24,20 +24,20 @@
     margin: 50px;
   }
   
-  .form-container h1 {
+  .form-containerProfil h1 {
     margin-bottom: 40px;
     color: #5B3004;
     font-size: 70px;
   }
   
-  .form-group {
+  .form-groupProfil {
     margin-bottom: 35px;
     text-align: left;
     display: block;
     align-items: center;
   }
   
-  .form-group label {
+  .form-groupProfil label {
     display: block;
     flex: 1;
     color: #5B3004;
@@ -45,7 +45,7 @@
     margin-bottom: 20px;
   }
   
-  .form-group input {
+  .form-groupProfil input {
     width: calc(100% - 40px);
     padding: 8px 0;
     border-color: white;
@@ -55,44 +55,27 @@
     margin-left: 10px;
   }
   
-  .form-group input:focus {
+  .form-groupProfil input:focus {
     outline: none;
     border: 1px solid #945618D1;
   }
   
-  .form-buttons {
+  .form-buttonsProfil {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
   
-  .left-buttons {
+  .left-buttonsProfil {
     display: flex;
     gap: 10px;
   }
   
-  .right-button {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
 
-  .izlogujse{
+  .leftButtonsProfil{
     padding: 10px 20px;
-    background-color: white;
-    color: #5B3004;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    align-items: center;
-    font-size: 25px;
-    margin-top: 50px;
-  }
-
-  .leftButtons{
-    padding: 10px 20px;
-    background-color: white;
-    color: #5B3004;
+    background-color: #945618D1;
+    color: white;
     border: none;
     border-radius: 40px;
     cursor: pointer;

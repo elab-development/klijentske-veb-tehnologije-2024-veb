@@ -8,7 +8,9 @@ function Navig() {
                 <a href="/kontakt">Kontakt</a>
                 <a href="/knjige">Knjige</a>
                 <a href="/prijava">Prijavi se</a>
-                <button>Registruj se</button>
+                <a href="/registracija">
+                    <button>Registruj se</button>
+                </a>
             </div>
         </div>
     );

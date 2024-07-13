@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Book from './Book'; // Adjust path as per your project structure
-import CardData from '../components/CardData'; // Adjust path as per your project structure
+import Book from './Book';
+import CardData from '../components/CardData';
 
 interface FilteredBooksProps {
   filteredBooks: Book[];

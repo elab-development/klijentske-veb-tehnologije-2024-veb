@@ -1,53 +1,56 @@
-import './Knjige.css'; 
+import React, { useState } from 'react';
+import './Knjige.css';
 import books from './Books';
-import { useState } from 'react';
 import Book from '../models/Book';
 import LeftSideBar from './LeftSideBar';
-import FilteredBooks from '../models/FilteredBooks';
-
-// const books: Book[] = [
-//   { imageSrc: dina, title: 'Dina', author: 'Frank Herbert', year: 1965 },
-//   { imageSrc: ratSvetova, title: 'Rat svetova', author: 'Herbert Dž. Vels', year: 1898 },
-//   { imageSrc: decaSecanja, title: 'Deca sećanja', author: 'Mijanj Liuđisi', year: 2010 },
-//   { imageSrc: padNemani , title: 'Pad nemani', author: 'Džejms S. A. Kori', year: 2011 },
-//   { imageSrc: sahalin, title: 'Sahalin', author: 'Edvard Verkin', year: 2013 },
-//   { imageSrc: usponPersepolisa, title: 'Uspon Persepolisa', author: 'Džejms S. A. Kori', year: 2012 },
-//   { imageSrc: vorskaIgra, title: 'Vorska igra', author: 'Anara Beketa', year: 2018 },
-//   { imageSrc: kalibanovRat, title: 'Kalibanov rat', author: 'Džejms S. A. Kori', year: 2012 },
-// ];
+import CardData from './CardData';
 
 const Knjige: React.FC = () => {
-  // const [searchTerm, setSearchTerm] = useState<string>('');
-
-  // const filteredBooks = books.filter(book =>
-  //   book.title.toLowerCase().includes(searchTerm.toLowerCase())
-  // );
   const [filteredBooks, setFilteredBooks] = useState<Book[]>(books);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(4); 
 
-  const handleSearch = (searchTerm: string) => {
-    const filtered = books.filter(book =>
-      book.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredBooks(filtered);
-  };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentBooks = filteredBooks.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
   return (
     <div>
-      <LeftSideBar onSearch={handleSearch} />
+      <LeftSideBar
+        onSearch={(searchTerm: string) => {
+          const filtered = books.filter(book =>
+            book.title.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+          setFilteredBooks(filtered);
+          setCurrentPage(1); 
+        }}
+      />
       <div className="main-content">
-    <FilteredBooks filteredBooks={filteredBooks} />
-  </div>
+        <div className="card-grid">
+          {currentBooks.map((book, index) => (
+            <CardData key={index} {...book} />
+          ))}
+        </div>
+        <div className="pagination">
+          <button
+            onClick={() => paginate(currentPage > 1 ? currentPage - 1 : currentPage)}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => paginate(currentPage < Math.ceil(filteredBooks.length / itemsPerPage) ? currentPage + 1 : currentPage)}
+            disabled={currentPage === Math.ceil(filteredBooks.length / itemsPerPage)}
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </div>
-
-    // <div className="main-content">
-    //   <div className="card-grid">
-    //     {filteredBooks.map((book, index) => (
-    //       <CardData key={index} {...book} />
-    //     ))}
-    //   </div>
-
-    // </div>
   );
 };
 
 export default Knjige;
-
